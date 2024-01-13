@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title> SYMI Fashion Registration </title>
+        <script src="./images/js/validate.js" defer></script>
+        <script src="./images/js/registration.js" defer></script>
+        <link rel="stylesheet" href="./images/css/style.css">
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="left-container">
+                <img src="./images/res/img/reg_page.jpg">
+            </div>
+            <div id="right-container">
+                <form action="#" method="post" id="registration-form">
+                    <label class="form-element">
+                        <label id="title" class="form-element">Registration</label><br><br>
+                        Fill all the required fields <br>
+                        <div class="dual-input">
+                            <input type="text" name="fname" id="fname" placeholder="First Name" class="form-element" required> 
+                            <input type="text" name="lname" id="lname" placeholder="Last Name" class="form-element" required>
+                        </div>
+                        <input type="email" name="email" id="email" placeholder="E-mail" class="form-element" required>
+                        
+                        <div class="dual-input">
+                                <input type="password" name="password" id="password" placeholder="Password" class="form-element" required> <button type="button" id="show-password">Show</button>
+                                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" class="form-element" required> <button type="button" id="show-confirm-password">Show</button>
+                        </div>
+
+                        <div>
+                            <input type="text" name="address-l01" id="address-l01" placeholder="Address Line No. 01" class="form-element" required> <br>
+                            <input type="text" name="address-l02" id="address-l02" placeholder="Address Line No. 02" class="form-element">
+                            
+                            <div class="dual-input">
+                                <input type="text" name="city" id="city" placeholder="City" class="form-element" required>
+                                <input type="number" name="postcode" id="postcode" placeholder="Postcode" class="form-element" required>
+                            </div>
+
+                            <div>
+                                <label class="form-element">District : </label>
+                                <select name="district" id="district" class="form-element" required>
+                                    <option value="" selected> Select your district </option>
+                                    <option value="galle"> Galle </option>
+                                </select>                            
+                            </div>
+                        </div>
+
+                        <input type="tel" name="phone" id="phone" placeholder="Phone Number" class="form-element" required>
+
+                        <div>
+                            <label class="form-element">Gender : </label>
+                            <select name="gender" id="gender" class="form-element" required>
+                                <option value="" selected> Select a gender </option>
+                                <option value="male"> Male </option>
+                                <option value="female"> Female </option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="form-element">Date of Birth : </label>
+                            <input type="date" name="date-of-birth" id="date-of-birth" class="form-element" required>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" name="terms-and-conditions" value="y" id="terms-and-conditions" class="form-element" required> 
+                            <label id="terms-and-conditions-label" class="form-element"> I Agree with <a onclick="parent.tandC()">Terms and Conditions</a> </label>
+                        </div>
+
+                        <div>
+                            <button type="reset" id="reset" class="form-element"> Reset Form </button>
+                            <button type="submit" id="submit" class="form-element"> Register </button>
+                        </div>
+
+                        <br>
+                        <div id="already-member-label">
+                            <label> I am already a member : </label> <a onclick="parent.changePage(2000)"> Sign-in </a>
+                        </div>
+
+                    </label>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>

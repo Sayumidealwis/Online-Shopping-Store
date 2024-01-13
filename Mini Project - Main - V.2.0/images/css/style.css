@@ -1,0 +1,208 @@
+@font-face {
+    font-family: CustomOpenSans;
+    src: url("../res/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: CustomOpenSans;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    max-height: 100vh;
+    padding: 10px;
+
+    background-image: url("../res/img/background.jpg");
+}
+
+#main-container {
+    border: 1px solid black;
+    border-radius: 10px;
+
+    width: 900px;/*66.71vw;*/ /*calc( calc( 900 / 1349 ) * 100% );*/
+    height: 650px; /*88.64vh;*/
+
+    margin-left: calc( ( 100vw - 900px ) / 2 );
+    margin-top: calc( ( 100vh - 700px ) / 2 );
+
+    box-shadow: 10px 10px rgba( 39, 39, 39, 0.582);
+
+}
+
+#main-container #left-container {
+    
+    width: 35%;
+    height: 100%;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    float: left;
+}
+
+#main-container #left-container img {
+
+    width:100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 70%;
+
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+#main-container #right-container  {
+    width: 65%;
+    height: 100%; 
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    float: right;
+
+    background-color: whitesmoke;
+    padding: 25px 30px;
+}
+
+#main-container #right-container form #title {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#main-container #right-container form .dual-input {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main-container #right-container form .dual-input input {
+    width: calc(100% / 2 - 20px);
+    margin-right: 10px;
+}
+
+#main-container #right-container form select,
+#main-container #right-container form input {
+    width: calc(100% - 30px);
+    border: 0;
+    border-bottom: 1px solid grey;
+    background-color: inherit;
+    transition: all 0.1s;
+}
+
+#main-container #right-container form .form-element {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 3px;
+    height: 4.5%;/*calc( calc( 25 / 550 ) * 100% );*/ /*25px;*/
+}
+
+#main-container #right-container form select:hover,
+#main-container #right-container form .form-element input:hover
+{
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid black
+}
+
+#main-container #right-container form select:focus,
+#main-container #right-container form .form-element input:focus
+{
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid black;
+}
+/* 
+This is just a dirty way I used to justify the width
+district select bar to align with other elements
+
+IMPORTANT : DO NOT CHANGE THE FONT SIZE UNDER ANY CIRCUMSTANCES. OTHERWISE THIS TRICK WILL BREAK.
+*/
+#main-container #right-container form .form-element #district {
+    width: calc( 100% - 30px - 71.41px );
+}
+
+/* Same as above */
+#main-container #right-container form .form-element #gender {
+    width: calc( 100% - 30px - 74.23px );
+}
+
+/* Same as above */
+#main-container #right-container form .form-element #date-of-birth {
+    width: calc( 100% - 30px - 113.41px );
+}
+
+#main-container #right-container form .form-element button
+{
+    width: calc( 100% / 2 - 16px );
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: inherit;
+    height: 7.2%;/*calc( calc( 40 / 550 ) * 100% );*//*40px;*/
+    transition: all 0.3s ease-in-out;
+}
+
+#main-container #right-container form .form-element button:hover
+{
+    border-radius: 10px;
+    background-color: grey;
+}
+
+#main-container #right-container form .form-element button:active
+{
+    background-color: black;
+    color: white;
+}
+
+#main-container #right-container form .form-element #submit
+{
+    background-color: rgb(100, 100, 100);
+    color: rgb(230, 230, 230);
+}
+
+#main-container #right-container form .form-element #submit:hover
+{
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+#main-container #right-container form .form-element #submit:active
+{
+    background-color: black;
+    color: white;
+}
+
+#main-container #right-container #already-member-label {
+    text-align: center;
+    font-size: 12px;
+}
+
+
+#main-container #right-container form #show-password,
+#main-container #right-container form #show-confirm-password{
+    width: 10% ;
+    margin: 0;
+    margin-left: -10%;
+    margin-top: 1%;
+    border: none;
+    transition: none;
+}
+
+#main-container #right-container form #show-password:hover,
+#main-container #right-container form #show-confirm-password:hover {
+    background-color: inherit;
+    text-decoration: underline;
+    border: none;
+}
+#main-container #right-container form #terms-and-conditions-label,
+#main-container #right-container form #terms-and-conditions {
+    padding: 0;
+    width: 3%;
+    height: 3%;
+    margin-top: 3%;
+    margin-bottom: 4%;
+    margin-right: 12px;
+    font-size: 13px;
+}

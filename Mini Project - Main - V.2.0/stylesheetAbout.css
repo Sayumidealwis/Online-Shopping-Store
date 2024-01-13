@@ -1,0 +1,98 @@
+	/*------ ELEMENTS -----*/
+
+	body{
+		background-color:#eee;
+		font-family:Fira Sans;
+		color:#222222;
+		text-shadow:1px 0px 2px #2228;
+	}
+
+	h1{
+		width:35%;
+		padding:2%;
+		float:left;
+		color:#eee;
+		text-shadow:4px 4px 8px #000;
+	}
+
+	input{
+		width:15%;
+		border:solid 3px #151515;
+		border-radius:50%;
+		height:auto;
+		margin:1.5%;
+		float:left;
+	}
+
+	/*------ ALIGNMENT ------*/
+
+	.justify{
+		text-align:justify;
+	}
+
+	.center{
+		text-align:center;
+	}
+
+	/*------ CONTAINERS ------*/
+
+	.container{
+		box-shadow: 0 4px 12px 0 #22222277;
+		width:65%;
+		margin-left:15%;
+		padding:1%;
+		float:left;
+	}
+
+	.icons{
+		margin-top:0.5%;
+		padding:1%;
+		float:left;
+		width:55%;
+		border-radius:10px;
+	}
+
+	.text{
+			float:left;
+			padding: 0.2%;
+			margin-left:5.5%;
+			width:45%;
+	}
+
+	.preview	{
+		float:left;
+		padding: 0.2%;
+		width:45%;
+		height:auto;
+	}
+
+	/*------ COLOR ADJUST ------*/
+
+	.black{
+		background-color:#222;
+	}
+
+	.white{
+		background-color:#fff;
+	}
+
+	/*---------- TEXT ----------*/
+
+	#preview{
+		max-width:105%;
+		height:auto;
+		padding:1%;
+	}
+
+	#memname{
+		font-size:20px;
+	}
+
+	#title{
+		font-size:30px;
+		font-weight:bold;
+	}
+
+	#desc{
+		font-size:15px;
+	}

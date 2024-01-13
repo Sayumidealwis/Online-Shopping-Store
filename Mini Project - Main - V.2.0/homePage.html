@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Home Page
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+    </script>
+  </head>
+  <body>
+    <div style="padding: 30px 200px 30px 200px">
+      <!-- Container for the image gallery -->
+      <div class="container">
+      
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="./images/photoGallery1.jpeg" style="width: 100%; height: 50%;">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="./images/photoGallery2.jpg" style="width: 100%; height: 100%;">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="./images/photoGallery5.jpg" style="width: 100%; height: 100%;">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="./images/photoGallery8.jpg" style="width: 100%; height: 100%;">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="./images/photoGallery7.jpg" style="width: 100%; height: 100%;">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="./images/photoGallery3.jpg"  style="width: 100%; height: 100%;">
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="./images/photoGallery1.jpeg" style="width:100%" onclick="currentSlide(1)">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./images/photoGallery2.jpg" style="width:100%" onclick="currentSlide(2)">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./images/photoGallery5.jpg" style="width:100%" onclick="currentSlide(3)"
+              alt="Mountains and fjords">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./images/photoGallery8.jpg" style="width:100%" onclick="currentSlide(4)">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./images/photoGallery7.jpg" style="width:100%" onclick="currentSlide(5)"
+              alt="Nature and sunrise">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./images/photoGallery3.jpg" style="width:100%" onclick="currentSlide(6)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM CATEGORY CARDS -->
+
+    <img src = "./images/homeitems/discount.jpg" class = "bannerimg">
+
+    <div class = "card">
+        <div class="wrapper">
+            <img src="./images/homeitems/menbnnr.jpg" class="bannerimg">
+        </div>
+        <div class = "wrapper navy">
+            <div class = "catitems">
+                <input type="image" src="./images/homeitems/men_shrt.jpg" class="cardbutton" onclick="parent.view('menwear')">
+                <input type="image" src="./images/homeitems/men_pnts.jpg" class="cardbutton" onclick="parent.view('menwear')">
+                <input type="image" src="./images/homeitems/men_shoe.jpg" class="cardbutton" onclick="parent.view('footwear')">
+                <input type="image" src="./images/homeitems/men_accr.jpg" class="cardbutton" onclick="parent.view('menwear')">
+            </div>
+        </div>
+    </div>
+
+    <div class = "card">
+        <div class="wrapper">
+            <img src="./images/homeitems/womenbnnr.jpg" class="bannerimg">
+        </div>
+        <div class = "wrapper red">
+            <div class = "catitems">
+                <input type="image" src="./images/homeitems/women_shrt.jpg" class="cardbutton" onclick="parent.view('womenwear')">
+                <input type="image" src="./images/homeitems/women_pnts.jpg" class="cardbutton" onclick="parent.view('womenwear')">
+                <input type="image" src="./images/homeitems/women_shoe.jpg" class="cardbutton" onclick="parent.view('footwear')">
+                <input type="image" src="./images/homeitems/women_accr.jpg" class="cardbutton" onclick="parent.view('womenwear')">
+            </div>
+        </div>
+    </div>
+
+    <div class = "card">
+        <div class="wrapper">
+            <img src="./images/homeitems/kidbnnr.jpg" class="bannerimg">
+        </div>
+        <div class = "wrapper yellow">
+            <div class = "catitems">
+                <input type="image" src="./images/homeitems/kid_shrt.jpg" class="cardbutton" onclick="parent.view('kidwear')">
+                <input type="image" src="./images/homeitems/kid_pnts.jpg" class="cardbutton" onclick="parent.view('kidwear')">
+                <input type="image" src="./images/homeitems/kid_shoe.jpg" class="cardbutton" onclick="parent.view('footwear')">
+                <input type="image" src="./images/homeitems/kid_accr.jpg" class="cardbutton" onclick="parent.view('kidwear')">
+            </div>
+        </div>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>

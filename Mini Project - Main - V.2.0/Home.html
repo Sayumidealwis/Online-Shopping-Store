@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<title>
+		SYMI Fashion
+	</title>
+</head>
+
+<body>
+	<div class="pagesStyle">
+		<div class="navBar">
+			<i class="fa fa-ravelry" style="color: white; position: absolute; left: 15px; top: 15px;"></i>
+			<div class="navItem" onclick="view('home')">
+				Home
+			</div>
+			<div class="navItem" onclick="view('joinUs')">
+				Join Us <i class="fa fa-caret-down"></i>
+				<div class="subNav-content">
+					<span class="subNavItem" onclick="event.stopPropagation(); view('login')">Log In</span> <br>
+					<span class="subNavItem" onclick="event.stopPropagation(); view('register')">Register</span> <br>
+				</div>
+			</div>
+			<div class="navItem" onclick="view('itemsMain')">
+				Categories <i class="fa fa-caret-down"></i>
+				<div class="subNav-content">
+					<span class="subNavItem" onclick="event.stopPropagation(); view('menwear')">Mens wear</span> <br>
+					<span class="subNavItem" onclick="event.stopPropagation(); view('womenwear')">womens Wear</span> <br>
+					<span class="subNavItem" onclick="event.stopPropagation(); view('kidwear')">Kids Clothes</span> <br>
+					<span class="subNavItem" onclick="event.stopPropagation(); view('footwear')">Footwear</span> <br>
+				</div>
+			</div>
+			<div class="navItem" onclick="view('about')">
+				About Us
+			</div>
+			<div style="position: absolute; right: 140px; top: 12px;">
+				<button class="cart-button" onclick="viewCart()">
+					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+				</button>
+			</div>
+			<div style="position: absolute; right: 90px; top: 12px;">
+				Guest &nbsp;
+			</div>
+			<div style="position: absolute; right: 50px; top: 5px;">
+				<img class="menuBar-photo" src="./images/profilePic.png" alt="Profile Pic">
+			</div>
+			<div style="position: absolute; right: 20px; top: 12px;">
+				<i class="fa fa-bars fa-lg" aria-hidden="true" style="color: white; "></i>
+			</div>
+		</div>
+		<!-- <div class="framesStyle" > -->
+		<iframe id="i-frame" src="homePage.html" style="padding: 0px; margin: 0px; height: 94vh; width: 100vw;" scrolling="yes" allowTransparency="true" frameborder="0" title="pages"></iframe>
+		<!-- </div> -->
+		<div class="bottom-layer">
+			<span class="bot-layer-data">&copy; SYMI Fashion, Colombo 02. </span> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;	
+			<span class="bot-layer-data">(011) 2 345 678</span> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+			&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp;
+			<span class="bot-layer-data">symifashion@gmail.com</span>
+		</div>
+	</div>
+	<script>
+		function viewCart() {
+			document.getElementById("i-frame").src = "paymentsPage.html";
+		}
+		function view(page) {
+			sessionStorage.setItem("cat", null);
+			switch (page) {
+				case 'home': 
+					document.getElementById("i-frame").src = "homePage.html";
+					break;
+				case 'about':
+					document.getElementById("i-frame").src = "aboutus.html";
+					break;
+				case 'items':
+					document.getElementById("i-frame").src = "itemspec.html";
+					break;
+				case 'menwear':
+					sessionStorage.setItem("cat", "mens");
+					document.getElementById("i-frame").src = "itemList.html";
+					break;
+				case 'womenwear':
+					sessionStorage.setItem("cat", "womens");
+					document.getElementById("i-frame").src = "itemList.html";
+					break;
+				case 'kidwear':
+					sessionStorage.setItem("cat", "kids");
+					document.getElementById("i-frame").src = "itemList.html";
+					break;
+				case 'footwear':
+					sessionStorage.setItem("cat", "feet");
+					document.getElementById("i-frame").src = "itemList.html";
+					break;
+				case 'itemsMain':
+					document.getElementById("i-frame").src = "itemList.html";
+					break;
+				case 'joinUs':
+				case 'login':
+					document.getElementById("i-frame").src = "signin.html";
+					break;
+				case 'register':
+					document.getElementById("i-frame").src = "registration.html";
+					break;
+				default:
+					document.getElementById("i-frame").src = "homePage.html";
+					break;
+			}
+		}
+		function showItemSpec(item) {
+			sessionStorage.setItem("itempic", item[0]);
+			sessionStorage.setItem("itemname", item[1]);
+			sessionStorage.setItem("itemprice", item[2]);
+			document.getElementById("i-frame").src = "itemspec.html"
+		}
+		function closePage() {
+			document.getElementById("i-frame").src = "itemList.html"
+		}
+		function changePage (src) {
+			if (src === 1000) {
+				document.getElementById("i-frame").src = "registration.html";
+			} else {
+				document.getElementById("i-frame").src = "signin.html";
+			}
+		}
+		function tandC () {
+			document.getElementById("i-frame").src = "tandc.html"
+		}
+	</script>
+</body>
+
+</html>

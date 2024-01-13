@@ -1,0 +1,208 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="paymentsPage.css">
+		<script src="paymentsPage.js">
+		</script>
+	</head>
+	<body>
+		<div class="main">
+			<!--Top main div-->          
+			<div class="top-main" id="top-main">
+				<!--Top left div--> 
+				<div class="left">
+					<!--Form--> 
+					<form onsubmit="paymentsDetails();return false;"> <!--return false; stop page relaod-->
+						<h2>Billing Details</h2><br>
+						<input type="text" id ="fname" placeholder = "First Name" size = "85" required>
+						<input type="text" id="lname" placeholder = "Last Name" size = "85" required>
+						<br><br>
+						<input type="text" id="houseno" placeholder = "House No" size = "85" required><br><br>
+						<input type="text" id="streetaddress" placeholder = "Street Address" size = "85" required><br><br>
+						Select Province<br>
+						<select id = "province" name="province" style="width: 620px;" required>
+							<option value="Western Province">Western Province</option>
+							<option value="Eastern Province">Eastern Province</option>
+							<option value="Southern Province">Southern Province</option>
+							<option value="Central Province">Central Province</option>
+							<option value="North Central Province">North Central Province</option>
+							<option value="North Western Province">North Western Province</option>
+							<option value="Uva Province">Uva Province</option>
+							<option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
+							<option value="Northern Province">Northern Province</option>
+						</select>
+						<br><br>
+						Select District<br>
+						<select id = "district" name="district" style="width: 620px;" required>
+								<option value="Ampara">Ampara</option>
+								<option value="Anuradhapura">Anuradhapura</option>
+								<option value="Badulla">Badulla</option>
+								<option value="Batticaloa">	Batticaloa</option>
+								<option value="Colombo">Colombo</option>
+								<option value="Galle">Galle</option>
+								<option value="Galle">Galle</option>
+								<option value="Hambantota">Hambantota</option>
+								<option value="Jaffna">Jaffna</option>
+								<option value="Kalutara">Kalutara</option>
+								<option value="Kandy">Kandy</option>
+								<option value="Kegalle">Kegalle</option>
+								<option value="Kilinochchi">Kilinochchi</option>
+								<option value="Kurunegala">Kurunegala</option>
+								<option value="Mannar">Mannar</option>
+								<option value="Matale">Matale</option>
+								<option value="Matara">Matara</option>
+								<option value="Moneragala">Moneragala</option>
+								<option value="Mullativu">Mullativu</option>
+								<option value="Nuwara Eliya">Nuwara Eliya</option>
+								<option value="Polonnaruwa">Polonnaruwa</option>
+								<option value="Puttalam">Puttalam</option>
+								<option value="Ratnapura">Ratnapura</option>
+								<option value="Trincomalee">Trincomalee</option>
+								<option value="Vavuniya">Vavuniya</option>
+						</select>
+						<br><br>
+						<input type="text" id="postcode" placeholder = "Postcode" size = "85" required><br><br>
+						<input type="text" id="phoneno1" placeholder = "Phone No 1" size = "85" required><br><br>
+						<input type="text" id="phoneno2" placeholder = "Phone No 2" size = "85" required><br><br>
+						<input type="text" id="email" placeholder = "Email" size = "85" required><br><br>
+						<textarea rows = "10" cols ="79" id="notes" placeholder = "Other Notes (optional)" size = "85"></textarea><br><br>
+						<input type="checkbox" id="tandc" name="tandc" value="Accepted" size = "85" required>I Accept The<a onclick="parent.tandC()">Terms and Conditions</a><br><br>
+						<input type="submit" style="width: 620px;" value="PLACE ORDER">
+					</form>   
+				</div>
+				<!--Top right div--> 
+				<div class="right">
+					<h3>REVIEW YOUR ORDER</h3>
+					<!--Begin of the table-->
+					<table class="item-table">
+						<tr>
+							<th>Product</th>
+							<th>Quantity</th>
+							<th>SubTotal (Rs.)</th>
+						</tr>
+						<tr>
+							<td>
+								<!--Item 1 div--> 
+								<div class="item-1">
+									<img src="./images/item-1.jpeg" alt="item-1-img">
+									<div class="item-1-discription">
+										Men's Slim Fit Formal Shirt (M) LKR 5000
+									</div>
+								</div>
+							</td>
+							<td><input type="number" id="qty-1" value="1" min="1" onclick="cart()"></td>
+							<td><input type="text" id="text-1" value = "5000" size="10"></td>
+						</tr>
+						<tr>
+							<td>
+								<!--Item 2 div--> 
+								<div class="item-2">
+									<img src="./images/item-2.jpeg" alt="item-2-img">
+									<div class="item-2-discription">
+										Men's Casual Denim Shirt (M) LKR 3000
+									</div>
+									</div>
+								</div>
+							</td>
+							<td><input type="number" id="qty-2" value="1" min="1" onclick="cart()"></td>
+							<td><input type="text" id="text-2" value = "3000" size="10"></td>
+						</tr>
+						<tr>
+							<td>
+								<!--Item 3 div--> 
+								<div class="item-3">
+									<img src="./images/item-3.jpeg" alt="item-3-img">
+									<div class="item-3-discription">
+										Men's Casual Button Down Shirt (L) LKR 2000
+									</div>
+									</div>
+								</div>
+							</td>
+							<td><input type="number" id="qty-3" value="1" min="1" onclick="cart()"></td>
+							<td><input type="text" id="text-3" value = "2000" size="10"></td>
+						</tr>		
+						<tr>
+							<td>
+								<div class="total">
+									<h2>Total : </h2> 
+								</div>    
+							</td>
+							<td><h2>Rs .</h2></td>
+							<td><input type="text" id="tot" value ="10000" size="10"></td>
+						</tr>
+					</table>
+					<h2>Order Details</h2><br>
+						<!--Order details div--> 
+						<div class="order-details">
+							SYMI Fashions 00048235 Order.
+						</div>
+					</div>
+				</div>
+				<!--Bottom main div--> 
+				<div class="bottom-main" id="bottom-main">
+					<!--Bottom main top div--> 
+					<div class="bottom-main-top-wrap">
+						<h1>SYMI Fashions</h1>
+						<h3>Secure payments</h3>
+					</div>
+
+					<!--Bottom main bottom div--> 
+					<div class="bottom-main-bottom-wrap">
+						<h2>Payment details</h2>
+						<p><b>Please select your payment method.</b></p>
+					<div>
+						<input type="radio" name="payment-method" id="credit-card">Credit or Debit Card<br>
+						<div class="credit-card-div">
+							Card Number * : <br>
+							<input type="text" id="card-number" name="card-number" size="40" placeholder="XXXX-XXXX-XXXX-XXXX" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"><br><br>
+							Expiry month* &nbsp;&nbsp;&nbsp; Expiry year* <br>
+							<select id="month" name="month">
+								<option value="MM">MM</option>
+								<option value="01">01</option>
+								<option value="02">02</option>
+								<option value="02">03</option>
+								<option value="04">04</option>
+								<option value="05">05</option>
+								<option value="06">06</option>
+								<option value="07">07</option>
+								<option value="08">08</option>
+								<option value="09">09</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select>
+							<select id="year" name="year">
+								<option value="YY">YY</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+								<option value="32">32</option>
+							</select><br><br>
+							Cardholder name * <br>
+							<input type="text" id="holder-name" name="holder-name" size="50"> <br><br>
+							Security code *<br>
+							<input type="text" id="security-code" name="security-code" size="5" placeholder="XXX" pattern="[0-9]{3}">
+							<div class="btn-paynow-div">   
+								<button class = "btn-paynow"onclick="payNowFunction()">Pay now</button>
+							</div>
+						</div>
+						<input type="radio" name="payment-method" id="cashondelivery">Cash On Delivery<br>
+						<div class="btn-proceed-div">
+							<button class="btn-proceed" onclick="proceedFunction()">Proceed</button>
+						</div>
+						<div class="cancel-order">
+							<button class = "btn-cancel"onclick="paymentCancel()">Cancel Order</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,525 @@
+<html>
+	<head><title></title>
+	<style>
+	    body{
+		background-color:#ffffff;
+		 margin: 0;
+		}
+		#background{
+		background-image:url(./images/bcpic.JPG);
+		 background-size: cover;
+
+		
+		background-attachment:scroll;
+		height:100%;
+		}
+		
+	
+
+		legend {
+		background-color:#04528D;
+		color: #ffffff;
+		padding: 20px 100px;
+		font-family:Arial;
+		border-radius: 8px;
+		}	
+		
+		#column_A{
+		background:#313555  ;
+		float:left;
+		width:22%;
+		height:40%
+		}
+		#columnspace {background:#ffffff;float:left;width:3%;height:40%;}
+		#rowspace {background: #ffffff;float:left;width:100%;height:5%;}
+		#rowspace2 {background: #ffffff;float:left;width:100%;height:5%;}
+		#rowspace3 {background: #ffffff;float:left;width:100%;height:5%;}
+		
+		button {
+		background-color:#313555 ;
+		border-style: solid;
+		border-color: white;
+		color:#ffffff  ;
+		padding:10px;
+		text-align:center;
+		text-decoration:none;
+		display:inline-block;
+		font-size:16px;
+		margin:10px;
+		cursor:pointer;
+		position:relative; 
+		left:40px; 
+		border-radius: 8px;
+		}
+		
+		
+		
+		.imgclass1{
+		width:100%;
+		height:75%;
+		position:relative;
+		left:0px;
+		top:0px;
+		}
+		.imgclass2{
+		width:100%;
+		height:100%;
+		position:relative;
+		left:0px;
+		top:0px;
+		}
+		
+		.imgclass3{
+		width:100%;
+		height:100%;
+		position:relative;
+		
+		}
+		
+		.imgclass4{
+		width:55%;
+		height:60%;
+		position:relative;
+		left:px;
+		top:200px;
+		}
+		
+		.f1{
+		font-weight: lighter;
+		font-family:Corbel;
+		font-size:90px;
+		color:#ffffff  ;
+		}
+		.f2{
+		font-weight: lighter;
+		font-family:Arial;
+		font-size:40px;
+		color:#86AFD4 ;
+		}
+		.f3{
+		font-weight: ;
+		font-family:Arial;
+		font-size:30px;
+		color:#02D52B ; 
+		}
+		.f4{
+		font-weight: lighter;
+		font-family:"Segoe Print";
+		font-size:90px;
+		color:#03F4DC  ;
+		}
+		a {
+		color: #5D8064  ;
+		background-color: transparent;
+		text-decoration:none;}
+		
+		.f5{
+		font-family:Arial;
+		font-size:20px;
+		color:#FF2701;
+		position:relative;
+		left:100px;
+		}
+		
+		fieldset{
+		
+		background-color:#ffffff   ;
+		border-radius: 8px;
+		border-width: 2px;
+		width:98%;
+		height:200%;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var category = sessionStorage.getItem("cat");
+			switch (category) {
+				case 'mens': 
+					document.getElementById("maaaan").click()
+					break;
+				case 'womens':
+					document.getElementById("womaaaan").click()
+					break;
+				case 'kids':
+					document.getElementById("kiiiids").click()
+					break;
+				case 'feet':
+					document.getElementById("foooooot").click()
+					break;
+				default:
+					break;
+			}
+		};
+	</script>
+	</head>
+	<body>
+		
+		 <div id="background">
+		 <div style="width: 39%;height:100%;float:left;">
+		 <table style="position:relative;top:200px">
+			<tr><td><font class="f1">SYMI </font><font class="f1">FASHION</font></tr>
+			<tr><td><font class="f2">All Categories......One Place</font></td></tr>
+			<tr><td><font class="f3"><a id="maaaan" href="#men">MEN</a> | <a id="womaaaan" href="#wemen">WOMEN</a> | <a id="kiiiids" href="#kids">KIDS</a> | <a id="foooooot" href="#footware">FOOTWARE</a> </font></tr>
+		 </table>
+		</div>
+		<div style="width:59%;height:100%;float:left;">
+		
+		</div>
+		</div>
+		 <div  id="rowspace3"></div>
+		
+	<fieldset><legend id="men">MEN</legend>
+		 <div  id="rowspace"></div>
+		<div id="column_A">
+			<button style="left:0px;border: none;">White Long Sleeve Mens Cotton Shirt</button>
+			<img src="./images/items/m1.jpg" class="imgclass1">
+			<button>LKR 3200/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/m1.jpg', 'White Long Sleeve Mens Cotton Shirt', 3200])" >Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+			
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Slim Fit Cotton Mens Party Wear Coat</button>
+			<img src="./images/items/m2.jpg" class="imgclass1">
+			<button>LKR 5400/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/m2.jpg', 'Slim Fit Cotton Mens Party Wear Coat', 5400])">Buy Now</button>
+			
+		</div>
+		
+		<div  id="columnspace"></div>
+		
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Mens Casual Pale blue</button>
+			<img src="./images/items/m3.jpg" class="imgclass1">
+			<button>LKR 2200/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/m3.jpg', 'Mens Casual Pale blue', 2200])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+			
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Men Short Sleeve Polo Shirt  </button>
+			<img src="./images/items/m4.jpg" class="imgclass1">
+			<button>LKR 1200/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/m4.jpg', 'Men Short Sleeve Polo Shirt', 1200])">Buy Now</button>
+			
+		</div>
+		
+		
+		
+		
+		<div  id="rowspace"></div>
+		
+			
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Fleet Grey Smart Men's Wool Trousers</button>
+			<img src="./images/items/m5.jpg" class="imgclass1">
+			<button>LKR 4200/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/m5.jpg', 'Fleet Grey Smart Mens Wool Trousers', 4200])">Buy Now</button>
+			
+		</div>
+		
+		<div  id="columnspace"></div>
+		
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Pegasus Corduroy Trouser</button>
+			<img src="./images/items/m6.jpg" class="imgclass1">
+			<button>LKR 3500/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/m6.jpg', 'Pegasus Corduroy Trouser', 3500])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+		
+		<div id="column_A">
+			<button style="left:0px;border: none;">Cotton Flat Trousers </button>
+			<img src="./images/items/m7.jpg" class="imgclass1">
+			<button>LKR 2200/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/m7.jpg', 'Cotton Flat Trousers', 2200])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+			
+		<div id="column_A">
+			<button style="left:0px;border: none;">Men Short Sleeve Polo Shirt</button>
+			<img src="./images/items/m8.jpg" class="imgclass1">
+			<button>LKR 2800/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/m8.jpg', 'Men Short Sleeve Polo Shirt', 2800])">Buy Now</button>
+			
+		</div>
+		
+	</fieldset>	
+	
+	<div  id="rowspace3"></div>
+		
+	<fieldset><legend id="wemen">WOMEN</legend>
+		<div  id="rowspace"></div>
+		<div id="column_A">
+			<button style="left:0px;border: none;">Ruby-Red Floral Print Silk Puff-Sleeve</button>
+			<img src="./images/items/w1.jpg" class="imgclass1">
+			<button>LKR 6600/=</button>
+			<a href="2.html"><button onclick="parent.showItemSpec(['./images/items/w1.jpg', 'Ruby-Red Floral Print Silk Puff-Sleeve', 6600])">Buy Now</button></a>
+			<a href="3.html"></a>
+		</div>
+		
+		<div id="columnspace"></div>
+			
+		<div  id="column_A">
+			<button style="left:0px;border: none;">White Bridesmaid Dress</button>
+			<img src="./images/items/w2.jpg" class="imgclass1">
+			<button>LKR 7200/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/w2.jpg', 'White Bridesmaid Dress', 7200])">Buy Now</button>
+			
+		</div>
+		
+		<div  id="columnspace"></div>
+		
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Women Party wear </button>
+			<img src="./images/items/w3.jpg" class="imgclass1">
+			<button>LKR 5300/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/w3.jpg',' Women Party wear', 5300])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+			
+		<div  id="column_A">
+			<button style="left:0px;border: none;"> Blue sleeveless</button>
+			<img src="./images/items/w4.jpg" class="imgclass1">
+			<button>LKR 5900/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/w4.jpg', 'Blue sleeveless', 5900])">Buy Now</button>
+			
+		</div>
+		
+		
+		
+		
+		<div  id="rowspace"></div>
+		
+			
+		<div  id="column_A">
+			<button style="left:0px;border: none;"> Evening gown</button>
+			<img src="./images/items/w5.jpg" class="imgclass1">
+			<button>LKR 5200/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/w5.jpg', 'Evening gown', 5200])">Buy Now</button>
+			
+		</div>
+		
+		<div  id="columnspace"></div>
+		
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Chiffon Strapless Evening Gown</button>
+			<img src="./images/items/w6.jpg" class="imgclass1">
+			<button>LKR 6000/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/w6.jpg', 'Chiffon Strapless Evening Gown', 6000])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+		
+		<div id="column_A">
+			<button style="left:0px;border: none;">Black embroidery evening gown </button>
+			<img src="./images/items/w7.jpg" class="imgclass1">
+			<button>LKR 6200/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/w7.jpg', 'Black embroidery evening gown', 6200])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+			
+		<div id="column_A">
+			<button style="left:0px;border: none;">Cotton Women Casual Gown</button>
+			<img src="./images/items/w8.jpg" class="imgclass1">
+			<button>LKR 3400/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/w8.jpg', 'Cotton Women Casual Gown', 3400])">Buy Now</button>
+			
+		</div>
+		
+	</fieldset>	
+	
+	<div  id="rowspace3"></div>
+	
+	<fieldset><legend id="kids">KIDS</legend>
+		<div  id="rowspace"></div>
+		<div id="column_A">
+			<button style="left:0px;border: none;">Cotton Fashion Shirt Kids</button>
+			<img src="./images/items/k1.jpg" class="imgclass1">
+			<button>LKR 1600/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/k1.jpg', 'Cotton Fashion Shirt Kids', 1600])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+			
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Boys Casual Sport Pants</button>
+			<img src="./images/items/k2.jpg" class="imgclass1">
+			<button>LKR 1900/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/k2.jpg', 'Boys Casual Sport Pants', 1900])">Buy Now</button>
+			
+		</div>
+		
+		<div  id="columnspace"></div>
+		
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Children Shorts Cotton Trousers</button>
+			<img src="./images/items/k3.jpg" class="imgclass1">
+			<button>LKR 950/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/k3.jpg', 'Children Shorts Cotton Trousers', 950])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+			
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Wind Jacket Kids</button>
+			<img src="./images/items/k4.png" class="imgclass1">
+			<button>LKR 5200/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/k4.png', 'Wind Jacket Kids', 5200])">Buy Now</button>
+			
+		</div>
+		
+		
+		
+		
+		<div  id="rowspace"></div>
+		
+			
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Boys Brown Shirts </button>
+			<img src="./images/items/k5.jpg" class="imgclass1">
+			<button>LKR 1000/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/k5.jpg', 'Boys Brown Shirts', 1000])">Buy Now</button>
+			
+		</div>
+		
+		<div  id="columnspace"></div>
+		
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Boys Casual Shorts</button>
+			<img src="./images/items/k6.jpg" class="imgclass1">
+			<button>LKR 1800/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/k6.jpg', 'Boys Casual Shorts', 1800])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+		
+		<div id="column_A">
+			<button style="left:0px;border: none;">Kids Shirts Sea Blue</button>
+			<img src="./images/items/k7.jpg" class="imgclass1">
+			<button>LKR 1300/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/k7.jpg', 'Kids Shirts Sea Blue', 1300])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+			
+		<div id="column_A">
+			<button style="left:0px;border: none;">Kids Denim Shorts</button>
+			<img src="./images/items/k8.jpg" class="imgclass1">
+			<button>LKR 1600/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/k8.jpg', 'Kids Denim Shorts', 1600])">Buy Now</button>
+			
+		</div>
+		
+	</fieldset>	
+	
+	<div  id="rowspace3"></div>
+	
+	<fieldset><legend id="footware">FOOTWARE</legend>
+		<div  id="rowspace"></div>
+		<div id="column_A">
+			<button style="left:0px;border: none;">Men's Cross Training Shoes</button>
+			<img src="./images/items/s1.jpg" class="imgclass1">
+			<button>LKR 4000/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/s1.jpg', 'Mens Cross Training Shoes', 4000])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+			
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Brown Hiking Boots</button>
+			<img src="./images/items/s2.jpg" class="imgclass1">
+			<button>LKR 6200/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/s2.jpg', 'Brown Hiking Boots', 6200])">Buy Now</button>
+			
+		</div>
+		
+		<div  id="columnspace"></div>
+		
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Comfortable & Casual Men's Shoes </button>
+			<img src="./images/items/s3.jpg" class="imgclass1">
+			<button>LKR 4600/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/s3.jpg', 'Comfortable & Casual Mens Shoes', 4600])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+			
+		<div  id="column_A">
+			<button style="left:0px;border: none;"> SKECHERS Casual Men's Shoes</button>
+			<img src="./images/items/s4.jpg" class="imgclass1">
+			<button>LKR 5200/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/s4.jpg', 'SKECHERS Casual Mens Shoes', 5200])">Buy Now</button>
+			
+		</div>
+		
+		
+		
+		
+		<div  id="rowspace"></div>
+		
+			
+		<div  id="column_A">
+			<button style="left:0px;border: none;"> Canvas Shoes</button>
+			<img src="./images/items/s5.jpg" class="imgclass1">
+			<button>LKR 2400/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/s5.jpg', 'Canvas Shoes', 2400])">Buy Now</button>
+			
+		</div>
+		
+		<div  id="columnspace"></div>
+		
+		<div  id="column_A">
+			<button style="left:0px;border: none;">Fashion Heeled Shoes Woman</button>
+			<img src="./images/items/s6.jpg" class="imgclass1">
+			<button>LKR 3900/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/s6.jpg', 'Fashion Heeled Shoes Woman', 3900])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+		
+		<div id="column_A">
+			<button style="left:0px;border: none;"> Casual Boots Girls</button>
+			<img src="./images/items/s7.jpg" class="imgclass1">
+			<button>LKR 4500/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/s7.jpg', 'Casual Boots Girls', 4500])">Buy Now</button>
+			
+		</div>
+		
+		<div id="columnspace"></div>
+			
+		<div id="column_A">
+			<button style="left:0px;border: none;">Sloping and Round Office Shoes Women</button>
+			<img src="./images/items/s8.jpg" class="imgclass1">
+			<button>LKR 2600/=</button>
+			<button onclick="parent.showItemSpec(['./images/items/s8.jpg', 'Sloping and Round Office Shoes Women', 2600])">Buy Now</button>
+		</div>
+		
+	</fieldset>	
+	
+		
+	
+		
+		
+	</body> 
+</html>

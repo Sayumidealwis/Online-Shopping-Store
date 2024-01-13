@@ -1,0 +1,106 @@
+<html>
+
+<head>
+	<title>Item Details</title>
+	<link rel ="stylesheet" href="stylesheetItemSpec.css">
+	<script>
+		window.onload = function () {
+			var itempic = sessionStorage.getItem("itempic");
+			var itemname = sessionStorage.getItem("itemname");
+			var itemprice = sessionStorage.getItem("itemprice");
+			document.getElementById("mainimg").src = itempic;
+			document.getElementById("smolimg").src = itempic;
+			document.getElementById("smolimg2").src = itempic;
+			document.getElementById("smolimg3").src = itempic;
+			document.getElementById("picname").innerText= itemname;
+			document.getElementById("picprice").innerText = itemprice;
+		}
+	</script>
+</head>
+
+<body>
+
+	<div class = "container">
+
+		<!----------------- PREVIEW -------------------->
+
+		<div class = "preview center">
+
+			<img src = "./images/sample1.jpg" id="mainimg" class ="image"><br>
+			<input id="smolimg" type = "image" src = "./images/sample1.jpg" class = "small_button" onclick="img1()">
+			<input id="smolimg2" type = "image" src = "./images/sample2.jpg" class = "small_button" onclick="img2()">
+			<input id="smolimg3" type = "image" src = "./images/sample3.jpg" class = "small_button" onclick="img3()">
+
+		</div>
+
+		<!--------------- PURCHASE DETAILS---------------->
+
+		<div class="ordform">
+
+			<h3 id="picname">LEVI'S SYNTHETIC LONG SLEEVED SHIRT</h3>
+			LKR<h4 id="picprice">  3500 </h4>
+
+			<div class="services">
+				<p><img class ="icon" src = "./images/ic1.png"> Cash on Delivery</p>
+				<p><img class ="icon" src = "./images/ic2.png"> Home Delivery</p>
+				<p><img class ="icon" src = "./images/ic3.png"> Refund Policy</p>
+			</div>
+
+			<div class="">
+
+				<form method ="GET">
+
+				<button class = "button sizechart" onclick=" window.open('./images/sizechart.jpg') ">Size Chart</button></a>
+				<br><br>
+
+				Size:
+				<input type = "radio" name = "size" value = "small" checked>S</input>
+				<input type = "radio" name = "size" value = "medium">M</input>
+				<input type = "radio" name = "size" value = "large">L</input>
+				<input type = "radio" name = "size" value = "xlarge">XL</input>
+				<input type = "radio" name = "size" value = "xxlarge">2XL</input>
+				<input type = "radio" name = "size" value = "xxxlarge">3XL</input>
+				<br><br>
+
+
+				Colour:
+				<select name="qty" style="margin-left:25px;">
+				<option value="1" checked>White</option>
+				<option value="2">Black</option>
+				<option value="3">Yellow</option>
+				</select>
+				<br><br>
+
+				Quantity:
+				<input type ="number" name="qty" style="margin-left:10px;width:50px;" value="1" required>
+				<br><br>
+
+				<input class = "button submit" type = "submit" value="Proceed to Checkout">
+
+				</form>
+			</div>
+
+		</div>
+
+		<button onclick="parent.closePage()">X</button>
+
+	</div>
+		<!----------------- JAVASCRIPT -------------------->
+
+	<script>
+
+		function img1(){
+            document.getElementById("mainimg").src="./images/sample1.jpg"
+        }
+        function img2(){
+            document.getElementById("mainimg").src="./images/sample2.jpg"
+        }
+        function img3(){
+            document.getElementById("mainimg").src="./images/sample3.jpg"
+        }
+	</script>
+
+	<!------------------------------------------------------>
+</body>
+
+</html>

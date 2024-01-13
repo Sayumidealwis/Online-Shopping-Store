@@ -1,0 +1,96 @@
+<html>
+
+<head>
+	<title>About Us</title>
+	<link rel = "stylesheet" href="stylesheetAbout.css">
+</head>
+
+<body>
+
+	<!---------------- HEADER -------------->
+
+	<div class="container black">
+		<h1>MEET THE TEAM</h1>
+		<div class = "icons">
+			<input type="image" src ="./images/img1.jpg" onclick="img1()">
+			<input type="image" src ="./images/img2.jpg" onclick="img2()">
+			<input type="image" src ="./images/img3.jpg" onclick="img3()">
+			<input type="image" src ="./images/img4.jpg" onclick="img4()">
+			<input type="image" src ="./images/img5.jpg" onclick="img5()">
+		</div>
+
+	</div>
+
+	<!---------------- CONTENT ---------------->
+
+	<div class = "container white">
+
+		<div class = "preview">
+
+			<img id = "preview">
+
+		</div>
+
+		<div class="text">
+
+			<p id="memname">memname</p>
+			<p id = "title"></p>
+			<p id ="desc" class = "justify"></p>
+
+		</div>
+
+	</div>
+
+
+	<!---------------- JAVASCRIPT ---------------->
+
+	<script>
+		var preview = document.getElementById("preview");
+		var title = document.getElementById("title");
+		var desc = document.getElementById("desc");
+		var memname = document.getElementById("memname");
+
+		function img1(){
+			preview.src = "./images/woman.png";
+			memname.innerHTML = "SAYUMI DE ALWIS";
+			title.innerHTML = "CEO";
+			desc.innerHTML = "CEOs are responsible for managing a company's overall operations. This may include delegating and directing agendas, driving profitability, managing company organizational structure, strategy, and communicating with the board.<br><br>These qualities are embedded in our co-founder and current CEO, Sayumi De Alwis. Her vision to create a line of high quality designer labels available to everyone led this organization to it's present state. Likes chocolate, long walks on the beach and flowers. And yes, gentlemen, she's single.";
+		}
+
+		function img2(){
+			preview.src = "./images/man2.png";
+			memname.innerHTML = "BUDDHIMA DE SOYZA";
+			title.innerHTML = "MARKETING DIRECTOR";
+			desc.innerHTML = "The success of a company's products or services often relies on marketing. At the helm of the marketing department is the marketing director, tasked with overseeing the development and implementation of marketing strategies, and with guiding the team that executes them.<br><br>The co-founder of the organization next to the CEO, Buddhima De Soyza has an exensive background in commerce and marketing. Under his guidance, sales have risen steadily since the start of the year. Some speculate whether or not the profits come from his brilliant sales management or the ties he has to the black market and the underground fashion scene. But those claims are unfounded and we assure that all products are genuine. Hopefully."
+		}
+
+		function img3(){
+			preview.src = "./images/man1.png";
+			memname.innerHTML = "NAVODYA HETTIARACHCHI";
+			title.innerHTML = "PUBLIC RELATIONS";
+			desc.innerHTML = "planning publicity strategies and campaigns. writing and producing presentations and press releases. dealing with enquiries from the public, the press, and related organisations. organising and attending promotional events such as press conferences, open days, exhibitions, tours and visits.<br><br> Navodya Hettiarachchi joined the team as a charismatic individual with a talent to attract the attention of anyone he associated with. His charm acquired him plenty of glances from the office ladies and the board considered posting him as a PR director. Partly due to his ability to run promotion campaigns but mostly to keep him out of the office.";
+		}
+
+		function img4(){
+			preview.src = "./images/man4.png";
+			memname.innerHTML = "HIMANTHA SERAPPERUMA";
+			title.innerHTML = "HUMAN RESOURCES";
+			desc.innerHTML = "A Human Resources (HR) Officer is responsible for managing every aspect of the employment process, including orientation and training new staff members. They also assist with payroll management, so employees receive their paychecks on time. <br><br> The newest addition to the team, Himantha Serapperuma is a lazer focused no-nonsense employee. His workflow is unmatched in the office and because of that, all programs and social events as well as recruitments function smoothly under his watch. Under the tough exterior, however, he is known to be an avid cat lover and holds his cat pringles in the highest regard.";
+		}
+
+		function img5(){
+			preview.src = "./images/man3.png";
+			memname.innerHTML = "CHARITH KULARATNE";
+			title.innerHTML = "QUALITY ASSURANCE";
+			desc.innerHTML = "A quality assurance specialist ensures that the final product observes the company’s quality standards. In general, these detail-oriented professionals are responsible for the development and implementation of inspection activities, the detection and resolution of problems, and the delivery of satisfactory outcomes. Should any defects be found, it’s up to the QA specialist to apply corrective actions.<br><br> Charith Kularatne has a multifaceted repetoire of skills that he applies hands on in the QA department working with his subordinates to ensure all products are up to standard. The office cafeteria is always emptied when he's there and most Friday nights, we can find him asleep under the sofa. Bad tolerance apparently.";
+		}
+
+		img1();
+
+	</script>
+
+	<!------------------------------------------->
+
+</body>
+
+</html>

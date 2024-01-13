@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title> SYMI Fashion Registration </title>
+        <script src="./images/js/validate.js" defer></script>
+        <script src="./images/js/signin.js" defer></script>
+        <link rel="stylesheet" href="./images/css/style.css">
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="left-container">
+                <img src="./images/res/img/reg_page.jpg">
+            </div>
+            <div id="right-container">
+                <form action="#" method="post" id="registration-form">
+                    <label class="form-element">
+                        <label id="title" class="form-element">Sign-in</label><br><br>
+                        Please enter your E-mail and Password<br><br>
+
+                        <input type="email" name="email" id="email" placeholder="E-mail" class="form-element" required>
+
+                        <input type="password" name="password" id="password" placeholder="Password" class="form-element" required> <button type="button" id="show-password">Show</button>
+                        <br>
+                        
+                        <div>
+                            <button type="reset" id="reset" class="form-element"> Reset Form </button>
+                            <button type="submit" id="submit" class="form-element"> Sign-in </button>
+                        </div>
+                        <br>
+                        <div id="already-member-label">
+                            <label> Not a member : </label> <a onclick="parent.changePage(1000)"> Register </a>
+                        </div>
+
+                    </label>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>
